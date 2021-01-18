@@ -22,9 +22,12 @@ val = response['response']['body']['items'][1]['pm10Value']
 
 text = (f'{city}의 미세먼지 농도는 {val}입니다. (측정소: {station})')
 
-#5. 텔레그램 메시지 전송 
-token = '1518258838:AAFM1gNfAS-OCvyiOZXdGCJb8o574ZSfSfQ'
-chat_id = '1597895806'
-telegram_url = f'https://api.telegram.org/bot{token}/sendMessage?chat_id = {chat_id}&text\{text}'
 
+# #5. 텔레그램 메시지 전송 
+token = ''
+api_url = f'https://api.telegram.org/bot{token}'
+chat_id = ''
+
+# telegram_url = f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text\{text}'
+telegram_url = f'{api_url}/sendMessage?chat_id={chat_id}&text={text}'
 requests.get(telegram_url)

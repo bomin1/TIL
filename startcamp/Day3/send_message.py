@@ -11,7 +11,7 @@ api_url = f'https://api.telegram.org/bot{token}'
 # 3. 메세지 보낸 사용자의 ID값 찾기
 chat_id_url = f'{api_url}/getUpdates'
 response = requests.get(chat_id_url).json()
-pprint.pprint(response)
+# pprint.pprint(response)
 
 
 chat_id = response['result'][0]['message']['chat']['id']
@@ -19,6 +19,9 @@ print(chat_id)
 
 # 4. chat id에게 메세지 보내기
 text = input("메세지를 입력하세요: ")
-message_url = f'{api_url}/sendMessage?chat_id = {chat_id}&text={text}'
+
+
+
+message_url = f'{api_url}/sendMessage?chat_id={chat_id}&text={text}'
 
 requests.get(message_url)

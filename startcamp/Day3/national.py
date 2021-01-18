@@ -11,9 +11,9 @@ response = requests.get(url).json()
 pprint.pprint(response)
 
 # 응답결과 확인 후 정보 추출하기
-# name = response['name']
-# country = response['country'][0]['country_id']
+name = response['name']
+country = response['country'][0]['country_id']
 
-# pro = response['country'][0]['probability']
+pro = round(response['country'][0]['probability']*100, 2)
 
-# print(f'{name}의 국적은 {pro}% 확률로 {country}입니다.')
+print(f'{name}의 국적은 {pro}% 확률로 {country}입니다.')
