@@ -29,7 +29,7 @@ for tc in range(1, T+1):
     numbers = list(map(int, input()))
 
     # 숫자의 개수를 누적할 리스트를 만든다
-    c = [0] * 12
+    c = [0] * 10
     # c = [0,0,0,0,0,0,0,0,0,0,0,0]
     # id = 0,1,2,3,4,5,6,7,8,9,10,11
     
@@ -43,7 +43,7 @@ for tc in range(1, T+1):
     tri = 0
     run_ = 0
     # 0~9까지의 숫자니까 반복횟수는 10번
-    while i < 10:
+    while i < 8:
         # triplet 확인
         # 3번이 넘게 카운트가 된거면 무조건 3번 반복된거니까 triplet이고  
         if c[i] >= 3:
