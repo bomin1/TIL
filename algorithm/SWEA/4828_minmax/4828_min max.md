@@ -96,17 +96,16 @@
      
          print("#{} {}".format(tc, res))
          
-   ```
-  
-   ```python
-     # 앞에서부터
-     def bubble_sort(arr):
-         for i in range(len(arr) - 1):
-             for j in range(len(arr) - i - 1):
-                 if arr[j] > arr[j + 1]:
-                     arr[j], arr[j + 1] = arr[j + 1], arr[j]
      ```
-  
+     
+     ```python
+        # 앞에서부터
+        def bubble_sort(arr):
+            for i in range(len(arr) - 1):
+                for j in range(len(arr) - i - 1):
+                    if arr[j] > arr[j + 1]:
+                        arr[j], arr[j + 1] = arr[j + 1], arr[j]
+     ```
   3. idea - 3
   
      ```python
