@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>CATCH</h1>
+  <h2>{{ message }}도착 완료</h2>
+
+  {% comment %} 뒤로가기? {% endcomment %}
+  <a href="{% url 'throw' %}">다시던지러</a>
+
+{% endblock  %}
